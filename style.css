@@ -1,0 +1,113 @@
+:root {
+    --color-bg-primary: #6B13B8; 
+    --color-bg-secondary: #B08CCF;
+    --color-text-primary: #2E0870;
+    --color-text-secondary: #FFFFFF;
+    --color-calculator-bg: #121212;
+    --color-button-bg: #000000;
+    --color-button-bg-hover: #0c0c0c;
+    --color-operator-hover: #7919ce; 
+    --color-equals-hover: #9674b4;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100%;
+    background-image: linear-gradient(to bottom, var(--color-bg-primary), var(--color-bg-secondary));
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.headerTitle {
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    color: var(--color-text-primary);
+    font-weight: 700;
+}
+
+.headerCredits {
+    color: var(--color-text-secondary);
+    font-weight: 700;
+    font-family: monospace;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator {
+    background-color: var(--color-calculator-bg);
+    padding: 3rem 2rem;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.calculatorDisplay {
+    height: 5rem;
+    background-color: var(--color-text-secondary);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+.calculatorButtons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.btn {
+    width: 80px;
+    height: 90px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btnNumber {
+    background-color: var(--color-button-bg);
+    color: var(--color-text-secondary);
+    transition: background-color 0.2s ease;
+}
+
+.btnNumber:hover {
+    background-color: var(--color-button-bg-hover);
+}
+
+.btnOperator {
+    background-color: var(--color-bg-primary);
+    transition: background-color 0.2s ease;
+}
+
+.btnOperator:hover {
+    background-color: var(--color-operator-hover);
+}
+
+.btnEquals {
+    background-color: var(--color-bg-secondary);
+    border-radius: 30px;
+    font-size: 2rem;
+    height: 70px;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.btnEquals:hover {
+    background-color: var(--color-equals-hover);
+}
